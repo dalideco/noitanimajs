@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        div {
+            background-color: #E6E6E6;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: all;
+        }
+
+        canvas{
+            width: 100%;
+            height: 100vh;
+            pointer-events: visible;
+        }
+
+        .cadre {
+            position: absolute;
+            top: 0;left: 0;
+            background-color: transparent;
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div style="height: 500px"></div>
+    <div>
+        <canvas id="clock"></canvas>
+        <div class="cadre"></div>
+    </div>
+    <script src="utils.js"></script>
+    <script src="circle.js"></script>
+    <script src="moving-circles.js"></script>
+    <!-- <script src="canvas.js"></script> -->
+</body>
+</html>
