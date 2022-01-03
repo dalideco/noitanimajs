@@ -30,11 +30,15 @@ for (let i = 0; i < 200; i++) {
     }))
 }
 
-canvas.addEventListener('mousemove', (e) => {
-    const { offsetX, offsetY } = e
+window.addEventListener('scroll', ()=>{
+    console.log(canvas.getBoundingClientRect());
+})
 
-    mousePosition.x = offsetX;
-    mousePosition.y = offsetY;
+window.addEventListener('mousemove', (e) => {
+    const { clientX, clientY } = e
+
+    mousePosition.x = clientX ;
+    mousePosition.y = clientY ;
 })
 
 function animate() {

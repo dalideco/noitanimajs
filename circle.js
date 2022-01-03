@@ -31,8 +31,14 @@ class Circle {
     }
 
     distanceToPoint(x, y) {
-        const xside = this.x - x;
-        const yside = this.y - y
+
+        const {x: canvaX,y: canvaY} = this.canvas.getBoundingClientRect()
+
+        const absoluteX = canvaX + this.x;
+        const absoluteY = canvaY + this.y;
+
+        const xside = absoluteX - x
+        const yside = absoluteY - y
         return Math.sqrt(xside*xside+yside*yside)
     }
 
@@ -48,7 +54,7 @@ class Circle {
             if(this.radius >2)this.radius -= 2
             return;
         }
-        if (this.radius < 100) this.radius += 2
+        if (this.radius < this.hoveredSize) this.radius += 2
     }
 
     updatePosition() {
