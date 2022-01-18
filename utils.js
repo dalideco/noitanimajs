@@ -1,4 +1,4 @@
-function getRandomNumber(begin, end){
+export function getRandomNumber(begin, end){
     
     if(begin >=end ){
         throw Error("ya maalem fech taamel")
@@ -8,6 +8,6 @@ function getRandomNumber(begin, end){
     return Math.floor(Math.random()*IntervalLength)+begin
 }
 
-function getRandomFromArray(array) {
+export function getRandomFromArray(array) {
     return array[Math.floor(Math.random()* array.length)]
 }

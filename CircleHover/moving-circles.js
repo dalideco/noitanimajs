@@ -1,3 +1,6 @@
+import { getRandomFromArray, getRandomNumber } from "../utils";
+import Circle from './circle'
+
 class CircleHover {
 
     constructor({
@@ -64,9 +67,4 @@ class CircleHover {
 
 
 
-const movingCircles = new CircleHover({
-    el: document.querySelector('canvas'),
-    nbrCircles: 1000
-})
-
-movingCircles.animate()
+export default CircleHover
