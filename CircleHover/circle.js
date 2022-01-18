@@ -51,7 +51,7 @@ class Circle {
         const {x,y} = mousePosition;
 
         if (this.distanceToPoint(x, y) > 100) {
-            if(this.radius >2)this.radius -= 2
+            if(this.radius >1)this.radius -= 2
             return;
         }
         if (this.radius < this.hoveredSize) this.radius += 2
